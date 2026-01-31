@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bjfyvukqujb0d" path="res://game_scenes/boot_intro_sequence/boot_intro_sequence.gd" id="1_253u3"]
 [ext_resource type="Texture2D" uid="uid://8cahjsjg8fvp" path="res://game_scenes/boot_intro_sequence/studio_logo.png" id="1_fhwnk"]
 [ext_resource type="Texture2D" uid="uid://bwdmww3ac0o44" path="res://game_scenes/boot_intro_sequence/engine_logo.png" id="2_0cvup"]
+[ext_resource type="PackedScene" uid="uid://1n6tvyccp1t1" path="res://game_scenes/title_screen/title_screen.tscn" id="2_a60fr"]
 
 [sub_resource type="Animation" id="Animation_253u3"]
 length = 0.001
@@ -114,11 +115,15 @@ _data = {
 &"intro": SubResource("Animation_a60fr")
 }
 
-[node name="BootIntroSequence" type="Node2D" unique_id=1485185741]
+[node name="BootIntroSequence" type="Control" unique_id=2048250730]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_253u3")
+title_screen_scene = ExtResource("2_a60fr")
 
 [node name="BackingColorRect" type="ColorRect" parent="." unique_id=135483824]
 custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)

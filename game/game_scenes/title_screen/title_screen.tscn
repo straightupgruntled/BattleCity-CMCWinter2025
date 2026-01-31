@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://1n6tvyccp1t1"]
+
+[ext_resource type="Script" uid="uid://o4yww7ovxhgd" path="res://game_scenes/title_screen/title_screen.gd" id="1_gelbl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wr2d3"]
+font_size = 124
+outline_size = 34
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gelbl"]
+font_size = 38
+outline_size = 22
+outline_color = Color(0, 0, 0, 1)
+
+[node name="TitleScreen" type="Control" unique_id=762904614]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gelbl")
+
+[node name="BackingColorRect" type="ColorRect" parent="." unique_id=1682482411]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.29919538, 0.124482326, 0.076383956, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=2139339480]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 0
+offset_top = 95.0
+offset_right = 1920.0
+offset_bottom = 300.0
+text = "BATTLE CITY"
+label_settings = SubResource("LabelSettings_wr2d3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=1623397277]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 0
+offset_top = 197.0
+offset_right = 1920.0
+offset_bottom = 402.0
+text = "Core Mechanics Challenge: 2025 Winter"
+label_settings = SubResource("LabelSettings_gelbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=570996827]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -85.0
+offset_right = 181.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MenuButtons" unique_id=1781062603]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 42
+text = "PLAY"
+
+[node name="SettingsButton" type="Button" parent="MenuButtons" unique_id=265272013]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 42
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="MenuButtons" unique_id=99562661]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 42
+text = "QUIT"
+
+[connection signal="pressed" from="MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
