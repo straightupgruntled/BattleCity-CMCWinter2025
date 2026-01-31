@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://ovj5mubqq6u0"]
 
 [ext_resource type="Script" uid="uid://daypsyt8vwqfr" path="res://game_scenes/gameplay_scene/gameplay_scene.gd" id="1_pj10q"]
+[ext_resource type="PackedScene" uid="uid://qreauadbyx3d" path="res://game_objects/tank/tank.tscn" id="2_0qxly"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0qxly"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y1k20"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rqslb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7cxo"]
+normal = Vector2(-1, 0)
 
 [node name="GameplayScene" type="Node2D" unique_id=90529404]
 script = ExtResource("1_pj10q")
@@ -11,3 +23,24 @@ custom_minimum_size = Vector2(1920, 1080)
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
+
+[node name="Tank" parent="." unique_id=223310875 instance=ExtResource("2_0qxly")]
+position = Vector2(960, 540)
+
+[node name="BoundryWalls" type="StaticBody2D" parent="." unique_id=2124236576]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundryWalls" unique_id=1329234576]
+shape = SubResource("WorldBoundaryShape2D_0qxly")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BoundryWalls" unique_id=53519104]
+shape = SubResource("WorldBoundaryShape2D_y1k20")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BoundryWalls" unique_id=543756763]
+position = Vector2(1920, 1080)
+shape = SubResource("WorldBoundaryShape2D_rqslb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BoundryWalls" unique_id=1621679927]
+position = Vector2(1920, 1080)
+shape = SubResource("WorldBoundaryShape2D_s7cxo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=43011750]

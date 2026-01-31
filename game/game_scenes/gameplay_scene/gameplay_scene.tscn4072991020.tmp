@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ovj5mubqq6u0"]
+
+[ext_resource type="Script" uid="uid://daypsyt8vwqfr" path="res://game_scenes/gameplay_scene/gameplay_scene.gd" id="1_pj10q"]
+[ext_resource type="PackedScene" uid="uid://qreauadbyx3d" path="res://game_objects/tank/tank.tscn" id="2_0qxly"]
+
+[node name="GameplayScene" type="Node2D" unique_id=90529404]
+script = ExtResource("1_pj10q")
+title_screen_scenefile = "uid://1n6tvyccp1t1"
+
+[node name="BackingColorRect" type="ColorRect" parent="." unique_id=32676596]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Tank" parent="." unique_id=223310875 instance=ExtResource("2_0qxly")]
+position = Vector2(960, 540)
