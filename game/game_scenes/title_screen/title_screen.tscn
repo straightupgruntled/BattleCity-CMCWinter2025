@@ -20,6 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gelbl")
+gameplay_scenefile = "uid://ovj5mubqq6u0"
 
 [node name="BackingColorRect" type="ColorRect" parent="." unique_id=1682482411]
 custom_minimum_size = Vector2(1920, 1080)
