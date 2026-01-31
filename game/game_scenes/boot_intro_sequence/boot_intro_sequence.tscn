@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d2vbcprsithyb"]
 
 [ext_resource type="Script" uid="uid://bjfyvukqujb0d" path="res://game_scenes/boot_intro_sequence/boot_intro_sequence.gd" id="1_253u3"]
-[ext_resource type="Texture2D" uid="uid://8cahjsjg8fvp" path="res://game_scenes/boot_intro_sequence/studio_logo.png" id="1_fhwnk"]
-[ext_resource type="Texture2D" uid="uid://bwdmww3ac0o44" path="res://game_scenes/boot_intro_sequence/engine_logo.png" id="2_0cvup"]
+[ext_resource type="Texture2D" uid="uid://8cahjsjg8fvp" path="res://game_scenes/boot_intro_sequence/logos/studio_logo.png" id="1_fhwnk"]
+[ext_resource type="Texture2D" uid="uid://bwdmww3ac0o44" path="res://game_scenes/boot_intro_sequence/logos/engine_logo.png" id="2_0cvup"]
 [ext_resource type="PackedScene" uid="uid://1n6tvyccp1t1" path="res://game_scenes/title_screen/title_screen.tscn" id="2_a60fr"]
 
 [sub_resource type="Animation" id="Animation_253u3"]
